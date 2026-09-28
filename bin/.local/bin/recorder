@@ -75,6 +75,8 @@ video() {
 videoselected() {
 	slop -f "%x %y %w %h" > /tmp/slop
 	read -r X Y W H < /tmp/slop
+	W=$((W / 2 * 2))
+	H=$((H / 2 * 2))
 	rm /tmp/slop
 
 	mkdir -p "$HOME/Videos/videorec"
